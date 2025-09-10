@@ -1,39 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Overview from './pages/Overview';
-import Patients from './pages/Patients';
-import Expenses from './pages/Expenses';
-import Appointments from './pages/Appointments';
-import Reports from './pages/Reports';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Overview from "./pages/Overview";
+import Patients from "./pages/Patients";
+import Expenses from "./pages/Expenses";
+import Appointments from "./pages/Appointments";
+import Reports from "./pages/Reports";
+import Sidebar from "./components/Sidebar";
+import { useState } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <Router>
-      <div className={darkMode ? 'dark' : ''}>
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <div className="flex-1 p-4 bg-gray-100 dark:bg-gray-900 dark:text-white">
-            <button
-              onClick={toggleDarkMode}
-              className="mb-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            </button>
-            <Routes>
-              <Route path="/" element={<Overview />} />
-              <Route path="/patients" element={<Patients />} />
-              <Route path="/expenses" element={<Expenses />} />
-              <Route path="/appointments" element={<Appointments />} />
-              <Route path="/reports" element={<Reports />} />
-            </Routes>
-          </div>
+      <div className="flex min-h-screen">
+        {/* Sidebar */}
+        <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
+
+        {/* Content area */}
+        <div
+          className={`flex-1  bg-gray-100 transition-all duration-300 ${
+            collapsed ? "ml-20" : "ml-56"
+          }`}
+        >
+          <Routes>
+            <Route path="/" element={<Overview />} />
+            <Route path="/patients" element={<Patients />} />
+            <Route path="/expenses" element={<Expenses />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/reports" element={<Reports />} />
+          </Routes>
         </div>
       </div>
     </Router>

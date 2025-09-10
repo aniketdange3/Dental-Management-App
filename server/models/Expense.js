@@ -1,17 +1,9 @@
 
 const mongoose = require('mongoose');
 
+
 const expenseTypes = [
-  'Groceries',
-  'Rent',
-  'Utilities',
-  'Transport',
-  'Materials',
-  'Other',
-  'Dental Cleaning',
-  'Orthodontics',
-  'Dental Surgery',
-  'Cosmetic Dentistry'
+  'Supplements', 'Lab Fees', 'Equipment', 'Supplies', 'Utilities', 'Staff', 'Other'
 ];
 
 const ExpenseSchema = new mongoose.Schema({
