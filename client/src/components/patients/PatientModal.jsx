@@ -12,6 +12,8 @@ import {
   FaPlus,
   FaUser,
 } from 'react-icons/fa';
+import { MdLocalPhone } from 'react-icons/md';
+
 
 const PatientModal = ({
   isOpen,
@@ -210,7 +212,7 @@ const PatientModal = ({
                         {/* Contact */}
                         <div>
                           <label className="block text-sm font-medium text-gray-700 flex items-center">
-                            <FaPhone className="mr-2 text-gray-600" /> Contact
+                            <MdLocalPhone className="mr-2 text-gray-600" /> Contact
                           </label>
                           <input
                             type="text"

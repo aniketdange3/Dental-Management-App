@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { MdLocalPhone } from "react-icons/md";
+
 import { 
   FaUser, 
   FaEdit, 
@@ -182,7 +184,7 @@ const PatientTable = ({ patients, handleEdit, handleDelete, openProfile }) => {
                             )}
                             {patient.contactDetails && (
                               <span className="inline-flex items-center text-xs text-gray-500">
-                                <FaPhone className="w-3 h-3 mr-1" />
+                                <MdLocalPhone className="w-3 h-3 mr-1" />
                                 {patient.contactDetails.slice(0, 10)}...
                               </span>
                             )}
