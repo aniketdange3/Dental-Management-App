@@ -1,4 +1,4 @@
-<img width="1920" height="2781" alt="screencapture-localhost-5173-2025-11-16-09_59_29" src="https://github.com/user-attachments/assets/d92d46d4-a97f-4efc-b88d-dadd63d61652" /># Dental Clinic Dashboard
+<img width="720" height="2781" alt="screencapture-localhost-5173-2025-11-16-09_59_29" src="https://github.com/user-attachments/assets/d92d46d4-a97f-4efc-b88d-dadd63d61652" /># Dental Clinic Dashboard
 
 **A clean, modern dashboard for managing a dental clinic — patients, appointments, expenses, and reports.**
 
@@ -38,7 +38,7 @@ This repository contains a React-based admin dashboard designed to help small de
 ### Overview / Dashboard
 
 ![Overview Screenshot]
-![Uploading screencapture-localhost-5173-2025-11-16-09_59_29.png…]()
+<img width="720" height="1080" alt="screencapture-localhost-5173-2025-11-16-09_59_29" src="https://github.com/user-attachments/assets/d92d46d4-a97f-4efc-b88d-dadd63d61652" />
 
 ### Reports & Analytics
 
